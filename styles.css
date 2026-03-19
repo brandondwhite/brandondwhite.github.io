@@ -183,6 +183,11 @@ body::before {
   color: var(--secondary);
 }
 
+.hero-rest {
+  font-size: 0.82em;
+  color: var(--text);
+}
+
 .eyebrow {
   margin: 0;
   color: var(--secondary);
