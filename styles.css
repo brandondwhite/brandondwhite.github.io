@@ -150,7 +150,8 @@ body::before {
 .card-grid.three-up,
 .icon-skill-grid,
 .proof-grid,
-.contact-section {
+.contact-section,
+.about-layout {
   display: grid;
   gap: 22px;
 }
@@ -593,6 +594,14 @@ body::before {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.12em;
+}
+
+.about-layout {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.about-card p + p {
+  margin-top: 16px;
 }
 
 .contact-section {
