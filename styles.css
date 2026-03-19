@@ -424,9 +424,9 @@ body::before {
   width: 32px;
   height: 32px;
   object-fit: contain;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.96);
-  padding: 3px;
+  border-radius: 0;
+  background: transparent;
+  padding: 0;
   flex: 0 0 32px;
 }
 
