@@ -502,7 +502,7 @@ body::before {
   width: 22px;
   height: 22px;
   padding: 1px;
-  border-radius: 5px;
+  border-radius: 6px;
   display: inline-block;
   vertical-align: middle;
   position: relative;
