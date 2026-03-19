@@ -146,10 +146,8 @@ body::before {
 
 .hero,
 .wins-layout,
-.two-column,
 .card-grid.three-up,
 .icon-skill-grid,
-.proof-grid,
 .contact-section,
 .about-layout {
   display: grid;
@@ -379,14 +377,6 @@ body::before {
   grid-template-columns: 1.25fr 0.75fr;
 }
 
-.link-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 18px;
-}
-
-.link-stack a,
 .contact-section a {
   color: var(--secondary);
   text-decoration: none;
@@ -410,7 +400,6 @@ body::before {
   color: var(--text);
 }
 
-.link-stack a:hover,
 .contact-section a:hover { text-decoration: underline; }
 
 .card-grid.three-up { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -480,18 +469,6 @@ body::before {
   text-decoration: underline;
 }
 
-.badge-mark {
-  display: inline-grid;
-  place-items: center;
-  min-width: 46px;
-  height: 46px;
-  padding: 0 10px;
-  border-radius: 14px;
-  font-size: 0.82rem;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-}
-
 .badge-logo-frame {
   width: 32px;
   height: 32px;
@@ -508,11 +485,6 @@ body::before {
   height: 100%;
   object-fit: cover;
   display: block;
-}
-
-.school-badge .badge-mark {
-  background: linear-gradient(135deg, #f4c542, #d89900);
-  color: #1c1204;
 }
 
 .publication-link {
