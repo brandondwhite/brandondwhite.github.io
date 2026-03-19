@@ -233,7 +233,7 @@ body::before {
   line-height: 1;
   margin-bottom: 10px;
   letter-spacing: -0.04em;
-  overflow-wrap: anywhere;
+  white-space: nowrap;
 }
 
 .proof-card span {
