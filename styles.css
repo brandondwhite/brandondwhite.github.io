@@ -491,15 +491,18 @@ body::before {
   box-shadow: 0 0 0 6px rgba(125,180,255,0.14);
 }
 
-.employer-mark {
-  margin: 12px 0 14px;
+.inline-employer {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.employer-mark .badge-logo {
-  width: 28px;
-  height: 28px;
-  padding: 2px;
-  border-radius: 6px;
+.inline-employer .badge-logo {
+  width: 22px;
+  height: 22px;
+  padding: 1px;
+  border-radius: 5px;
+  vertical-align: middle;
 }
 
 .timeline-year {
