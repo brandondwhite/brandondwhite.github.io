@@ -315,6 +315,18 @@ body::before {
   letter-spacing: -0.04em;
 }
 
+.hero-card h2 {
+  margin-bottom: 12px;
+}
+
+.hero-card-supporting-text {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 30ch;
+}
+
 .tech-grid,
 .mini-stats,
 .icon-skill-grid {
