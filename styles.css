@@ -616,6 +616,21 @@ body::before {
 }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .background-orb,
+  .reveal,
+  .proof-card {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+
+  .reveal {
+    opacity: 1;
+  }
+}
+
 @keyframes float {
   0%, 100% { transform: translate3d(0, 0, 0); }
   50% { transform: translate3d(0, -20px, 0); }
