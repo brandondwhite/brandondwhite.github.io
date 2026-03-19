@@ -411,13 +411,13 @@ body::before {
 }
 
 .badge-logo {
-  width: 46px;
-  height: 46px;
+  width: 32px;
+  height: 32px;
   object-fit: contain;
-  border-radius: 12px;
+  border-radius: 8px;
   background: rgba(255, 255, 255, 0.96);
-  padding: 6px;
-  flex: 0 0 46px;
+  padding: 3px;
+  flex: 0 0 32px;
 }
 
 .school-badge .badge-mark {
