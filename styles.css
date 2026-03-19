@@ -372,6 +372,65 @@ body::before {
   font-weight: 700;
 }
 
+.badge-stack {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.credential-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.credential-badge:hover,
+.publication-link:hover {
+  text-decoration: underline;
+}
+
+.badge-mark {
+  display: inline-grid;
+  place-items: center;
+  min-width: 46px;
+  height: 46px;
+  padding: 0 10px;
+  border-radius: 14px;
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.aws-badge .badge-mark {
+  background: linear-gradient(135deg, #ffb454, #ff8a3d);
+  color: #1c1204;
+}
+
+.school-badge .badge-mark {
+  background: linear-gradient(135deg, #f4c542, #d89900);
+  color: #1c1204;
+}
+
+.simple-badge .badge-mark {
+  background: rgba(125, 180, 255, 0.18);
+  color: var(--secondary);
+}
+
+.publication-link {
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: none;
+}
+
 .feature-card h3,
 .timeline-item h3,
 .glass-card h3 { margin-top: 0; font-size: 1.22rem; }
