@@ -500,6 +500,17 @@ body::before {
   box-shadow: 0 0 0 6px rgba(125,180,255,0.14);
 }
 
+.employer-mark {
+  margin: 12px 0 14px;
+}
+
+.employer-mark .badge-logo {
+  width: 28px;
+  height: 28px;
+  padding: 2px;
+  border-radius: 6px;
+}
+
 .timeline-year {
   color: var(--secondary);
   font-size: 0.9rem;
