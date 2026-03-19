@@ -423,11 +423,12 @@ body::before {
 .badge-logo {
   width: 32px;
   height: 32px;
-  object-fit: contain;
-  border-radius: 0;
+  object-fit: cover;
+  border-radius: 10px;
   background: transparent;
   padding: 0;
   flex: 0 0 32px;
+  overflow: hidden;
 }
 
 .school-badge .badge-mark {
@@ -499,10 +500,10 @@ body::before {
 }
 
 .inline-employer .badge-logo {
-  width: 26px;
-  height: 26px;
+  width: 30px;
+  height: 30px;
   padding: 0;
-  border-radius: 8px;
+  border-radius: 9px;
   display: inline-block;
   vertical-align: middle;
   position: relative;
