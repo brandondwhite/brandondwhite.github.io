@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Brandon White</title>
+  <desc id="desc">Staff DevOps Engineer social preview card</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#07101d" />
+      <stop offset="60%" stop-color="#0a1424" />
+      <stop offset="100%" stop-color="#0b1220" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7db4ff" />
+      <stop offset="100%" stop-color="#58d4ff" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="120" cy="90" r="180" fill="#7db4ff" opacity="0.10"/>
+  <circle cx="1030" cy="520" r="210" fill="#58d4ff" opacity="0.08"/>
+  <rect x="60" y="60" width="1080" height="510" rx="28" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.10)"/>
+  <text x="90" y="170" fill="#f5f7fb" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="800">Brandon White</text>
+  <text x="92" y="225" fill="#58d4ff" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">Staff DevOps Engineer</text>
+  <text x="92" y="290" fill="#a9bbd1" font-family="Inter, Arial, sans-serif" font-size="24">AWS • Automation • CI/CD • Observability • Platform Engineering</text>
+  <text x="92" y="370" fill="#f5f7fb" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">Design the platform.</text>
+  <text x="92" y="420" fill="#f5f7fb" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">Automate the toil.</text>
+  <text x="92" y="470" fill="#f5f7fb" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">Raise the engineering standard.</text>
+  <text x="92" y="530" fill="#a9bbd1" font-family="Inter, Arial, sans-serif" font-size="24">brandondwhite.github.io</text>
+  <rect x="840" y="175" width="250" height="250" rx="34" fill="url(#accent)" opacity="0.25"/>
+  <image href="avatar.jpg" x="855" y="190" width="220" height="220" preserveAspectRatio="xMidYMid slice"/>
+</svg>

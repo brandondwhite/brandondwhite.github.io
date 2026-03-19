@@ -624,12 +624,51 @@ body::before {
 }
 
 @media (max-width: 760px) {
-  .page-shell { width: min(calc(100% - 20px), var(--max-width)); }
+  .page-shell {
+    width: min(calc(100% - 20px), var(--max-width));
+    padding-top: 18px;
+  }
+
+  .site-header {
+    margin-bottom: 24px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2.35rem, 10vw, 4rem);
+    max-width: none;
+    line-height: 0.98;
+  }
+
+  .hero-rest {
+    font-size: 0.88em;
+  }
+
+  .hero-text,
+  .glass-card p,
+  .timeline-item p,
+  .contact-section p,
+  .feature-card li,
+  .skill-icon-card p,
+  .shutdown-card li,
+  .ai-card li {
+    font-size: 0.98rem;
+    line-height: 1.6;
+  }
+
   .hero-metrics,
   .mini-stats,
   .tech-grid,
   .icon-skill-grid,
   .card-grid.three-up,
   .principles-grid { grid-template-columns: 1fr; }
+
+  .proof-card {
+    padding: 18px;
+  }
+
+  .proof-card strong {
+    font-size: clamp(1.6rem, 8vw, 2rem);
+  }
+
   .background-orb { display: none; }
 }
