@@ -410,19 +410,19 @@ body::before {
   letter-spacing: 0.08em;
 }
 
-.aws-badge .badge-mark {
-  background: linear-gradient(135deg, #ffb454, #ff8a3d);
-  color: #1c1204;
+.badge-logo {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 6px;
+  flex: 0 0 46px;
 }
 
 .school-badge .badge-mark {
   background: linear-gradient(135deg, #f4c542, #d89900);
   color: #1c1204;
-}
-
-.simple-badge .badge-mark {
-  background: rgba(125, 180, 255, 0.18);
-  color: var(--secondary);
 }
 
 .publication-link {
