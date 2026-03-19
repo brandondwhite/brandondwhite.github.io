@@ -400,10 +400,6 @@ body::before {
   color: #ffffff;
 }
 
-.contact-section a.button-secondary {
-  color: var(--text);
-}
-
 .contact-section a:hover { text-decoration: underline; }
 
 .card-grid.three-up { grid-template-columns: repeat(3, minmax(0, 1fr)); }
