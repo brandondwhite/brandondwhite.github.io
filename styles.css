@@ -499,10 +499,10 @@ body::before {
 }
 
 .inline-employer .badge-logo {
-  width: 22px;
-  height: 22px;
-  padding: 1px;
-  border-radius: 6px;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border-radius: 8px;
   display: inline-block;
   vertical-align: middle;
   position: relative;
