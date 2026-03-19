@@ -441,15 +441,6 @@ body::before {
   text-decoration: none;
 }
 
-.publication-source {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  margin: 0 0 14px;
-  color: var(--muted);
-  font-weight: 700;
-}
-
 .publication-summary {
   margin-bottom: 0;
 }
