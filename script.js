@@ -46,3 +46,47 @@ document
     if (prefersReducedMotion && !el.classList.contains('count-up')) el.classList.add('visible');
     observer.observe(el);
   });
+
+const trackEvent = (eventName, params = {}) => {
+  if (typeof window.gtag !== 'function') return;
+  window.gtag('event', eventName, params);
+};
+
+const clickTrackingRules = [
+  {
+    selector: 'a[href="https://linkedin.com/in/brandon-d-white"]',
+    eventName: 'click_linkedin',
+    getParams: () => ({ event_category: 'engagement', event_label: 'linkedin_profile' })
+  },
+  {
+    selector: 'a[href="#wins"]',
+    eventName: 'click_nav_cta',
+    getParams: () => ({ event_category: 'navigation', event_label: 'see_signature_wins' })
+  },
+  {
+    selector: 'a[href="#contact"]',
+    eventName: 'click_nav_cta',
+    getParams: () => ({ event_category: 'navigation', event_label: 'get_in_touch' })
+  },
+  {
+    selector: '.publication-link',
+    eventName: 'click_publication',
+    getParams: () => ({ event_category: 'engagement', event_label: 'aws_database_blog' })
+  },
+  {
+    selector: '.credential-badge',
+    eventName: 'click_credential',
+    getParams: (el) => ({
+      event_category: 'engagement',
+      event_label: el.textContent.replace(/\s+/g, ' ').trim().slice(0, 100)
+    })
+  }
+];
+
+clickTrackingRules.forEach(({ selector, eventName, getParams }) => {
+  document.querySelectorAll(selector).forEach((el) => {
+    el.addEventListener('click', () => {
+      trackEvent(eventName, getParams(el));
+    });
+  });
+});
