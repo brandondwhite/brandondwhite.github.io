@@ -219,13 +219,6 @@ body::before {
   font-size: 1.02rem;
 }
 
-.hero-positioning {
-  margin: 14px 0 24px;
-  color: var(--muted);
-  font-weight: 600;
-  line-height: 1.6;
-  max-width: 42rem;
-}
 
 .hero-metrics {
   display: grid;
