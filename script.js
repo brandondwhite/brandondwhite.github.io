@@ -58,18 +58,28 @@ const trackOutboundClick = (el, eventName, params = {}) => {
 
   const target = el.getAttribute('target');
   const shouldDelayNavigation = !target || target === '_self';
+  const rel = el.getAttribute('rel') || '';
+  const features = rel.includes('noreferrer') ? 'noreferrer' : 'noopener';
 
   trackEvent(eventName, {
     ...params,
     transport_type: 'beacon',
     event_callback: () => {
-      if (shouldDelayNavigation) window.location.href = href;
+      if (shouldDelayNavigation) {
+        window.location.href = href;
+      } else if (target === '_blank') {
+        window.open(href, '_blank', features);
+      }
     }
   });
 
   if (shouldDelayNavigation) {
     setTimeout(() => {
       window.location.href = href;
+    }, 150);
+  } else if (target === '_blank') {
+    setTimeout(() => {
+      window.open(href, '_blank', features);
     }, 150);
   }
 };
