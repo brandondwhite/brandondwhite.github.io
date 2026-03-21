@@ -220,9 +220,11 @@ body::before {
 }
 
 .hero-positioning {
-  margin: 16px 0 0;
-  color: var(--secondary);
-  font-weight: 700;
+  margin: 14px 0 24px;
+  color: var(--muted);
+  font-weight: 600;
+  line-height: 1.6;
+  max-width: 42rem;
 }
 
 .hero-metrics {
