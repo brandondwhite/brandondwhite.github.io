@@ -84,6 +84,22 @@ const clickTrackingRules = [
     selector: 'a[href="#contact"]',
     eventName: 'click_nav_cta',
     getParams: () => ({ event_category: 'navigation', event_label: 'get_in_touch' })
+  }
+];
+
+clickTrackingRules.forEach(({ selector, eventName, getParams }) => {
+  document.querySelectorAll(selector).forEach((el) => {
+    el.addEventListener('click', () => {
+      trackEvent(eventName, getParams(el));
+    });
+  });
+});
+
+const outboundTrackingRules = [
+  {
+    selector: 'a[href="https://linkedin.com/in/brandon-d-white"]',
+    eventName: 'click_linkedin',
+    getParams: () => ({ event_category: 'engagement', event_label: 'linkedin_profile' })
   },
   {
     selector: '.publication-link',
@@ -100,23 +116,14 @@ const clickTrackingRules = [
   }
 ];
 
-clickTrackingRules.forEach(({ selector, eventName, getParams }) => {
+outboundTrackingRules.forEach(({ selector, eventName, getParams }) => {
   document.querySelectorAll(selector).forEach((el) => {
-    el.addEventListener('click', () => {
-      trackEvent(eventName, getParams(el));
-    });
-  });
-});
+    el.addEventListener('click', (event) => {
+      if (!event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey) {
+        event.preventDefault();
+      }
 
-document.querySelectorAll('a[href="https://linkedin.com/in/brandon-d-white"]').forEach((el) => {
-  el.addEventListener('click', (event) => {
-    if (!event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey) {
-      event.preventDefault();
-    }
-
-    trackOutboundClick(el, 'click_linkedin', {
-      event_category: 'engagement',
-      event_label: 'linkedin_profile'
+      trackOutboundClick(el, eventName, getParams(el));
     });
   });
 });
