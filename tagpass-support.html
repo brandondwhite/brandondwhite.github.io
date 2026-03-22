@@ -14,13 +14,27 @@
     <link rel="stylesheet" href="styles.css" />
     <style>
       body { min-height: 100vh; }
-      .support-shell { max-width: 860px; margin: 0 auto; padding: 48px 20px 80px; }
-      .support-card { padding: 32px; }
-      .support-card h1 { margin-top: 0; }
-      .support-card h2 { margin-top: 32px; font-size: 1.1rem; }
-      .support-card p, .support-card li { line-height: 1.7; }
+      .support-shell { position: relative; z-index: 1; width: min(calc(100% - 32px), 980px); margin: 0 auto; padding: 28px 0 72px; }
+      .support-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 28px; }
+      .support-card { padding: 36px; }
+      .support-card h1 { margin: 0 0 10px; font-size: clamp(2rem, 4vw, 2.8rem); }
+      .support-card h2 { margin: 34px 0 12px; font-size: 1.08rem; color: var(--secondary); }
+      .support-card p, .support-card li { line-height: 1.7; color: var(--muted); }
       .support-card ul { padding-left: 20px; }
-      .support-back { margin-bottom: 20px; display: inline-flex; }
+      .support-card a { color: var(--secondary); text-decoration: none; border-bottom: 1px solid rgba(88, 212, 255, 0.35); }
+      .support-card a:hover { color: var(--text); border-bottom-color: rgba(255,255,255,0.45); }
+      .support-intro { margin: 0 0 6px; color: var(--text); }
+      .support-subtle { margin: 0; }
+      .shot-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 18px; }
+      .shot-card { padding: 14px; border-radius: 22px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); }
+      .shot-card img { display: block; width: 100%; height: auto; border-radius: 18px; }
+      .shot-card p { margin: 10px 4px 2px; color: var(--text); font-size: 0.95rem; }
+      @media (max-width: 720px) {
+        .support-shell { width: min(calc(100% - 24px), 980px); }
+        .support-header { flex-direction: column; align-items: flex-start; }
+        .support-card { padding: 24px; }
+        .shot-grid { grid-template-columns: 1fr; }
+      }
     </style>
   </head>
   <body>
@@ -28,14 +42,36 @@
     <div class="background-orb orb-two"></div>
 
     <main class="support-shell">
-      <a class="button button-secondary support-back" href="/">← Back</a>
+      <header class="support-header">
+        <a class="button button-secondary" href="/">← Back</a>
+        <a class="button button-primary" href="https://brandondwhite.github.io/tagpass-privacy.html">Privacy Policy</a>
+      </header>
 
       <article class="glass-card premium-border support-card">
+        <p class="eyebrow">Support</p>
         <h1>TagPass Support</h1>
-        <p>Need help with TagPass? This page covers the basics and where to get support.</p>
+        <p class="support-intro">Need help with TagPass? This page covers the basics, common troubleshooting, and where to get support.</p>
+        <p class="support-subtle">TagPass lets you scan and save barcodes and QR codes from loyalty cards, membership cards, tickets, and other scannable passes, then display them fullscreen for scanning later.</p>
 
-        <h2>What TagPass Does</h2>
-        <p>TagPass lets you scan and save barcodes and QR codes from loyalty cards, membership cards, tickets, and other scannable passes, then display them fullscreen for scanning later.</p>
+        <h2>Screenshots</h2>
+        <div class="shot-grid">
+          <div class="shot-card">
+            <img src="assets/tagpass-support-jpg/1.jpg" alt="TagPass screenshot 1" loading="lazy" />
+            <p>Main pass stack</p>
+          </div>
+          <div class="shot-card">
+            <img src="assets/tagpass-support-jpg/2.jpg" alt="TagPass screenshot 2" loading="lazy" />
+            <p>Scanner view</p>
+          </div>
+          <div class="shot-card">
+            <img src="assets/tagpass-support-jpg/3.jpg" alt="TagPass screenshot 3" loading="lazy" />
+            <p>Fullscreen pass view</p>
+          </div>
+          <div class="shot-card">
+            <img src="assets/tagpass-support-jpg/4.jpg" alt="TagPass screenshot 4" loading="lazy" />
+            <p>Details and editing</p>
+          </div>
+        </div>
 
         <h2>Common Help</h2>
         <ul>
