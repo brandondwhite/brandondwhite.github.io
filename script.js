@@ -40,7 +40,7 @@ const observer = new IntersectionObserver(
 );
 
 document
-  .querySelectorAll('.content-section, .hero-card, .proof-card, .count-up, .timeline-item, .skill-icon-card, .shutdown-card, .ai-card')
+  .querySelectorAll('.content-section, .hero-card, .proof-card, .count-up, .timeline-item, .skill-icon-card, .shutdown-card, .ai-card, .cert-badge, .section-nav')
   .forEach((el) => {
     if (!el.classList.contains('count-up') && !prefersReducedMotion) el.classList.add('reveal');
     if (prefersReducedMotion && !el.classList.contains('count-up')) el.classList.add('visible');
