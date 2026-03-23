@@ -511,7 +511,18 @@ body::before {
 .glass-card h3 { margin-top: 0; font-size: 1.22rem; }
 .feature-card ul,
 .shutdown-card ul,
-.ai-card ul { padding-left: 18px; }
+.ai-card ul,
+.timeline-item ul {
+  padding-left: 18px;
+  margin-top: 16px;
+}
+
+.feature-card li + li,
+.shutdown-card li + li,
+.ai-card li + li,
+.timeline-item li + li {
+  margin-top: 8px;
+}
 
 .proof-label {
   display: inline-block;
